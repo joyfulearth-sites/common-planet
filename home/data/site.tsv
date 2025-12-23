@@ -1,0 +1,12 @@
+#key	value
+name	Common-Planet.org
+byline	[todo: byline]
+safeName	commonplanet-home
+iconName	CP Home
+welcome-message	[todo: welcome]
+footer-message	[todo: footer]
+siteMenuName	CP Home
+sections	
+local-url	http://localhost/common-planet/home/
+live-url	https://home.common-planet.org/
+year	2018

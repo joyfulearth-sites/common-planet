@@ -1,0 +1,12 @@
+#key	value
+name	Creditism by Common-Planet
+byline	[todo: byline]
+safeName	commonplanet-creditism
+iconName	Creditism / Ayu
+welcome-message	[todo: welcome]
+footer-message	[todo: footer]
+siteMenuName	Creditism Home
+sections	
+local-url	http://localhost/common-planet/creditism/
+live-url	https://creditism.common-planet.org/
+year	2022

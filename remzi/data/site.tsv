@@ -1,0 +1,12 @@
+#key	value
+name	Remzi Bajrami [CPF]
+byline	[todo: byline]
+safeName	commonplanet-remzi
+iconName	Remzi, Co-founder
+welcome-message	[todo: welcome]
+footer-message	[todo: footer]
+siteMenuName	Remzi Home
+sections	
+local-url	http://localhost/common-planet/remzi/
+live-url	https://remzi.common-planet.org/
+year	2025

@@ -1,0 +1,12 @@
+#key	value
+name	Partners @ Common-Planet
+byline	[todo: byline]
+safeName	commonplanet-partners
+iconName	CP Partners
+welcome-message	[todo: welcome]
+footer-message	[todo: footer]
+siteMenuName	Partners Home
+sections	
+local-url	http://localhost/common-planet/partners/
+live-url	https://partners.common-planet.org/
+year	2026
