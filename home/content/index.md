@@ -1,1 +1,1 @@
-%stub-coresnippet%
+[youtube]AfmaqjXiP6c[/youtube]

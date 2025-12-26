@@ -1,0 +1,747 @@
+<html>
+
+<body class="c60 c158">
+    <div>
+        <p class="c15 c194"><span class="c114"></span></p>
+    </div>
+    <p class="c33 c15"><span class="c4"></span></p>
+    <p class="c33 c15"><span class="c4"></span></p>
+    <p class="c33 c15"><span class="c4"></span></p>
+    <p class="c33"><span class="c39">Common Planet</span></p>
+    <p class="c169 c59 c15"><span class="c100 c60"></span></p>
+    <p class="c59 c15 c91"><span class="c60 c100"></span></p>
+    <p class="c33 c15"><span class="c5"></span></p>
+    <p class="c54 c59 c15"><span class="c5"></span></p>
+    <hr style="page-break-before:always;display:none;">
+    <p class="c116 c15"><span class="c112"></span></p>
+    <p class="c169 c59 c15"><span class="c4"></span></p>
+    <p class="c59 c15 c169"><span class="c4"></span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0"><span class="c4">Cover picture and text layout by Remzi Bajrami. This pdf version of this book is free
+            and is offered under a &lsquo;creative commons&rsquo; license; specifically an
+            Attribution-NonCommercial-ShareAlike 4.0 International (cc by-nc-sa 4.0) license. This means that you are
+            free to share and use anything herein, to modify and propagate it, provided that you also &lsquo;share
+            alike&rsquo; with the same license. It does not permit commercial use though because I still live in Game A
+            and still need some money from it, so if you plan to print this book and make money from it, please
+            don&rsquo;t. It is available in print on </span><span class="c64 c60"><a class="c24"
+                href="https://www.google.com/url?q=http://www.amazon.com&amp;sa=D&amp;source=editors&amp;ust=1644336307942169&amp;usg=AOvVaw3gYhX6fvAYkCi45wXdtSCc">Amazon</a></span><span
+            class="c4">.</span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c63 c59"><span class="c5">Copyright &copy; 2022 Remzi Bajrami</span></p>
+    <p class="c63 c59"><span class="c5">All rights reserved.</span></p>
+    <p class="c63 c59 c15"><span class="c5"></span></p>
+    <p class="c63 c59"><span class="c5">CommonPlanet.com</span></p>
+    <p class="c0 c15"><span class="c5"></span></p>
+    <p class="c0 c15"><span class="c5"></span></p>
+    <p class="c0"><span class="c5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ISBN:</span></p>
+    <p class="c0"><span class="c5">&nbsp;</span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <hr style="page-break-before:always;display:none;">
+    <p class="c101 c59 c15"><span class="c4"></span></p>
+    <p class="c101 c59"><span class="c60 c170">COMMON PLANET</span></p>
+    <p class="c59 c101"><span class="c60 c180">A New Game of Life</span></p>
+    <p class="c101 c59"><span class="c136 c60">By: Remzi Bajrami</span></p>
+    <p class="c184 c59 c15"><span class="c30"></span></p>
+    <p class="c27"><span class="c4">ADDRESSED TO THE</span></p>
+    <p class="c27"><span class="c4">INHABITANTS</span></p>
+    <p class="c27"><span class="c4">OF</span></p>
+    <p class="c27"><span class="c4">EARTH</span></p>
+    <p class="c27"><span class="c4">On the following interesting</span></p>
+    <p class="c27"><span class="c4">SUBJECTS</span></p>
+    <p class="c27"><span class="c4">&nbsp;Of Universal Human Rights</span></p>
+    <p class="c27"><span class="c4">Of the Security of Life</span></p>
+    <p class="c27"><span class="c4">Thoughts on Universal &amp; Contributory Value</span></p>
+    <p class="c27"><span class="c4">Of the present ability of Humanity,</span></p>
+    <p class="c27"><span class="c4">with Collective Production &amp; Commons Resources</span></p>
+    <p class="c54 c59 c15"><span class="c30"></span></p>
+    <p class="c54 c59 c15"><span class="c30"></span></p>
+    <p class="c54 c59 c15"><span class="c30"></span></p>
+    <p class="c63 c59"><span class="c5">&ldquo;Man knows no Master save creating Heaven,</span></p>
+    <p class="c63 c59"><span class="c5">Or those whom choice and common good ordain.&rdquo;</span></p>
+    <p class="c59 c235"><span class="c5">- Thomson</span>
+        <hr style="page-break-before:always;display:none;">
+    </p>
+    <hr style="page-break-before:always;display:none;">
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0"><span class="c42">&ldquo;Perhaps the sentiments contained in the following pages are not yet
+            sufficiently fashionable to procure them general favor; a long habit of not thinking a thing wrong, gives it
+            a superficial appearance of being right, and raises at first a formidable outcry in defense of custom. But
+            the tumult soon subsides. Time makes more converts than reason.</span></p>
+    <p class="c0 c15"><span class="c42"></span></p>
+    <p class="c0"><span class="c42">As a long and violent abuse of power, the (</span><span
+            class="c60 c108">Corporations</span><span class="c42">) support and corrupt all the (</span><span
+            class="c108 c60">Nations</span><span class="c42">) in what (</span><span class="c108 c60">both</span><span
+            class="c42">) call Theirs, and as the good people of this world are grievously oppressed by the combination,
+            they have an undoubted privilege to inquire into the pretensions of both, and equally to reject the
+            usurpation of either.</span></p>
+    <p class="c0 c15"><span class="c42"></span></p>
+    <p class="c0"><span class="c42">The cause of (</span><span class="c108 c60">Earth</span><span class="c42">) is in a
+            great measure the cause of all mankind. Many circumstances hath, and will arise, which are not local, but
+            universal, and through which the principles of all Lovers of Mankind are affected, and in the Event of
+            which, their Affections are interested. The laying a (</span><span class="c108 c60">Planet</span><span
+            class="c42">) desolate with Fire and Sword, declaring War against the natural rights of all Mankind, and
+            extirpating the Defenders thereof from the Face of the Earth, is the Concern of every Man to whom Nature
+            hath given the Power of feeling.&rdquo;</span><sup class="c44"><a href="#ftnt1" id="ftnt_ref1">[1]</a></sup>
+        <hr style="page-break-before:always;display:none;">
+    </p>
+    <p class="c59 c15 c63"><span class="c60 c120"></span></p>
+    <p class="c63 c59 c15"><span class="c120 c60"></span></p>
+    <p class="c63 c59 c15"><span class="c60 c113"></span></p>
+    <p class="c63 c59 c15"><span class="c4"></span></p>
+    <p class="c63 c59 c15"><span class="c4"></span></p>
+    <p class="c63 c59 c15"><span class="c4"></span></p>
+    <p class="c63 c59 c15"><span class="c4"></span></p>
+    <p class="c63 c59"><span class="c4">To my family, friends</span></p>
+    <p class="c63 c59"><span class="c4">and to all species</span></p>
+    <p class="c63 c59"><span class="c4">past and present.</span></p>
+    <p class="c54 c59 c15"><span class="c4"></span></p>
+    <p class="c54 c59 c15"><span class="c4"></span></p>
+    <p class="c54 c59 c15"><span class="c4"></span></p>
+    <p class="c54 c59 c15"><span class="c4"></span></p>
+    <p class="c54 c59 c15"><span class="c4"></span></p>
+    <p class="c54 c59 c15"><span class="c4"></span></p>
+    <p class="c54 c59 c15"><span class="c4"></span></p>
+    <p class="c54 c59 c15"><span class="c4"></span></p>
+    <p class="c63 c59"><span class="c4">In memory of David Graeber.</span></p>
+    <hr style="page-break-before:always;display:none;">
+    <p class="c63 c59 c15"><span class="c4"></span></p>
+    <p class="c116 c15"><span class="c146"></span></p>
+    <p class="c116 c15"><span class="c146"></span></p>
+    <p class="c15 c116"><span class="c146"></span></p>
+    <p class="c116 c15"><span class="c146"></span></p>
+    <p class="c116"><span class="c69">CONTENTS</span></p>
+    <p class="c33 c15"><span class="c4"></span></p>
+    <p class="c33 c15"><span class="c4"></span></p>
+    <p class="c33 c15"><span class="c4"></span></p><a id="t.9b71d26e9cc87de73415f84569ee4196d5cd8197"></a><a
+        id="t.0"></a>
+    <table class="c151">
+        <tbody>
+            <tr class="c202">
+                <td class="c156" colspan="1" rowspan="1">
+                    <p class="c8 c15"><span class="c28"></span></p>
+                </td>
+                <td class="c103" colspan="1" rowspan="1">
+                    <p class="c8"><span class="c74">Acknowledgements</span></p>
+                </td>
+                <td class="c244" colspan="1" rowspan="1">
+                    <p class="c79 c59"><span class="c35">xi</span></p>
+                </td>
+            </tr>
+            <tr class="c130">
+                <td class="c118" colspan="1" rowspan="1">
+                    <p class="c8 c15"><span class="c28"></span></p>
+                </td>
+                <td class="c14" colspan="1" rowspan="1">
+                    <p class="c79 c59"><span class="c74">Introduction by Adelina Bajrami</span></p>
+                </td>
+                <td class="c140" colspan="1" rowspan="1">
+                    <p class="c79 c59"><span class="c35">xiii</span></p>
+                </td>
+            </tr>
+            <tr class="c130">
+                <td class="c118" colspan="1" rowspan="1">
+                    <p class="c63 c59"><span class="c74">1</span></p>
+                </td>
+                <td class="c14" colspan="1" rowspan="1">
+                    <p class="c79 c59"><span class="c74">What Kind of World Do You Want To Live In?</span></p>
+                </td>
+                <td class="c140" colspan="1" rowspan="1">
+                    <p class="c79 c59"><span class="c35">1</span></p>
+                </td>
+            </tr>
+            <tr class="c130">
+                <td class="c118" colspan="1" rowspan="1">
+                    <p class="c63 c59"><span class="c74">2</span></p>
+                </td>
+                <td class="c14" colspan="1" rowspan="1">
+                    <p class="c59 c79"><span class="c42">A </span><span class="c74">Brief History of Game A</span></p>
+                </td>
+                <td class="c140" colspan="1" rowspan="1">
+                    <p class="c79 c59"><span class="c35">41</span></p>
+                </td>
+            </tr>
+            <tr class="c130">
+                <td class="c118" colspan="1" rowspan="1">
+                    <p class="c63 c59"><span class="c74">3</span></p>
+                </td>
+                <td class="c14" colspan="1" rowspan="1">
+                    <p class="c79 c59"><span class="c74">Common Planet</span></p>
+                </td>
+                <td class="c140" colspan="1" rowspan="1">
+                    <p class="c79 c59"><span class="c35">116</span></p>
+                </td>
+            </tr>
+            <tr class="c130">
+                <td class="c118" colspan="1" rowspan="1">
+                    <p class="c63 c59"><span class="c74">4</span></p>
+                </td>
+                <td class="c14" colspan="1" rowspan="1">
+                    <p class="c79 c59"><span class="c74">Sovereignty</span></p>
+                </td>
+                <td class="c140" colspan="1" rowspan="1">
+                    <p class="c79 c59"><span class="c35">142</span></p>
+                </td>
+            </tr>
+            <tr class="c130">
+                <td class="c118" colspan="1" rowspan="1">
+                    <p class="c63 c59"><span class="c74">5</span></p>
+                </td>
+                <td class="c14" colspan="1" rowspan="1">
+                    <p class="c79 c59"><span class="c74">Opportunity</span></p>
+                </td>
+                <td class="c140" colspan="1" rowspan="1">
+                    <p class="c79 c59"><span class="c35">175</span></p>
+                </td>
+            </tr>
+            <tr class="c130">
+                <td class="c118" colspan="1" rowspan="1">
+                    <p class="c63 c59"><span class="c74">6</span></p>
+                </td>
+                <td class="c14" colspan="1" rowspan="1">
+                    <p class="c79 c59"><span class="c74">Liberty</span></p>
+                </td>
+                <td class="c140" colspan="1" rowspan="1">
+                    <p class="c79 c59"><span class="c35">215</span></p>
+                </td>
+            </tr>
+            <tr class="c202">
+                <td class="c233" colspan="1" rowspan="1">
+                    <p class="c63 c59"><span class="c74">7</span></p>
+                </td>
+                <td class="c126" colspan="1" rowspan="1">
+                    <p class="c79 c59"><span class="c74">Transition</span></p>
+                </td>
+                <td class="c162" colspan="1" rowspan="1">
+                    <p class="c79 c59"><span class="c35">237</span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="c33 c15"><span class="c4"></span></p>
+    <p class="c33 c15"><span class="c4"></span></p>
+    <p class="c33 c15 c18 c142"><span class="c4"></span></p>
+    <hr style="page-break-before:always;display:none;">
+    <p class="c33 c15"><span class="c4"></span></p>
+    <hr style="page-break-before:always;display:none;">
+    <p class="c33 c15"><span class="c4"></span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c63 c59"><span class="c198 c60">ACKNOWLEDGEMENTS</span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As the author, I wish to thank every
+            person with whom I&rsquo;ve ever connected with in this world. This contribution was made possible entirely
+            because of your influence and from the vast wealth of information and knowledge produced by our ancestors
+            and the billions alive today. To this human experiment, I wish to reciprocate and share what I&rsquo;ve
+            learned, in hopes that we may prosper on our journey together in this universe.</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First, I&rsquo;d like to thank my
+            incredible parents: Mesude and Bajram Bajrami for their self-sacrificing support and patience for this work.
+            Their struggle formed the foundation on which my life was built. We&rsquo;re all perched atop the proverbial
+            &lsquo;shoulders of giants&rsquo;. And in my case, my father is my
+            giant.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Next, a debt of incredible gratitude to my love
+            Ardijana, my life partner and best friend. With all of my love in dedication also to: my adult kids,
+            brother, cousins, uncles, aunts, nephews, nieces and friends. Thank you all.</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A special thank you to Lisa Bloniarz
+            for the hundreds of hours of conversations exploring the territory with me. I learned a lot from you. You
+            must know how much I benefited from the confidence you built in me. &nbsp;</span></p>
+    <p class="c79 c59"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lastly, I&rsquo;d like to thank
+            people from the past and present that have had some influence in this work (listed in no particular order):
+            Isni Bajrami</span></p>
+    <p class="c78 c59"><span class="c4">Terrance McKenna, Yuval Harari, Ezra Bowen, John K. Galbraith</span></p>
+    <p class="c78 c59"><span class="c4">Joan Robinson, Buckminster Fuller, Jacque Fresco, Martin Luther King Jr.</span>
+    </p>
+    <p class="c78 c59"><span class="c4">Thorstein Veblen, James Baldwin, David Graeber, Rutger Bregman</span></p>
+    <p class="c78 c59"><span class="c4">Jason Hickel, Richard Wolff, David Harvey, Dan Ariely, John Perkins</span></p>
+    <p class="c59 c78"><span class="c4">Naomi Klein, Colin Turner, Nick Chugg, David Campbell, Alastair Lord</span></p>
+    <p class="c78 c59"><span class="c4">Tony Seba, Paul Ehrlich, Kate Raworth, Steve Keen, Mariana Mazzucato</span></p>
+    <p class="c78 c59"><span class="c4">Stephanie Kelton, Guy Standing, Yanis Varoufakis, William McDonough</span></p>
+    <p class="c78 c59"><span class="c4">Troy Wiley, Jim O&rsquo;Reilly, Gar Alperavitz, Elinor Ostrom, Chris
+            Hedges</span></p>
+    <p class="c78 c59"><span class="c4">Daniel Christian Wahl, Ralph Nader, Aldous Huxley, Bertrand Russell</span></p>
+    <p class="c78 c59"><span class="c4">Thomas Paine, Daniel Quinn, Cornel West, Bret Weinstein, Eric Weinstein</span>
+    </p>
+    <p class="c78 c59"><span class="c4">Peter Schurman, David Korten, Bill McKibben, George Monbiot</span></p>
+    <p class="c78 c59"><span class="c4">Shimshon Bichler, Jonathan Nitzan, Thomas Greco Jr., Robert Schram</span></p>
+    <p class="c78 c59"><span class="c4">Blair Fix, Arash Kolahi, Oshan Jarow, Norm Kurland, Russell Roberts</span></p>
+    <p class="c78 c59"><span class="c4">Anand Giridharadas, Malcolm Gladwell, Marianne Williamson, Peter Joseph</span>
+    </p>
+    <p class="c78 c59"><span class="c4">Caitlin Johnstone, Arthur Brock, Ferananda Ibarra, Giorgos Kallis</span></p>
+    <p class="c78 c59"><span class="c4">Tyler Patterson, Vinay Gupta, Kylie Stedman, Jubilee Briscoe, Anton
+            Wilson</span></p>
+    <p class="c78 c59"><span class="c4">Raymond Powell, Daniel Schmachtenberger, Jordan Hall, John Vervaeke</span></p>
+    <p class="c78 c59"><span class="c4">Hanzi Freinacht, Douglas Rushkoff, Gregory Rawlins, Michael Linton </span></p>
+    <p class="c78 c59"><span class="c4">Asatar Bair, Brent Cooper, Jim Rutt, Wayne Lewis, JoNell Homer</span></p>
+    <p class="c78 c59"><span class="c4">David Fuller, Nora Bateson, Bonnitta Roy, Michel Bauwens, Ken Wilber Charles
+            Eisenstein, Vandana Shiva, David Bollier, George P&oacute;r, Stef Kuypers</span></p>
+    <p class="c78 c59"><span class="c4">Nathan Waters, John Ash, Orkun Baysal, Guillermo Martin, Nils Semmler</span></p>
+    <p class="c78 c59"><span class="c4">Bentley Davis, David Roviks, Mark Nadal, Spencer Winans, Perry Gruber</span></p>
+    <p class="c78 c59"><span class="c4">&ldquo;John&rdquo; (JEWL), Brett Scott, Rob Konrad, Scott Santens, Todd
+            McKissick</span></p>
+    <p class="c78 c59"><span class="c4">George Mekhail, Gary Chartier, Charles Johnson, Nathan Robinson</span></p>
+    <p class="c78 c59"><span class="c4">Jeffrey Anthony, Nick Estes, Michael Kubler, Joe Brewer, Michael Hudson</span>
+    </p>
+    <p class="c78 c59"><span class="c4">Oshan Jarow, Warren Mosler, John Boik, Steve Grumbine, </span></p>
+    <hr style="page-break-before:always;display:none;">
+    <p class="c78 c59 c15"><span class="c4"></span></p>
+    <p class="c63 c59"><span class="c60 c198">INTRODUCTION</span></p>
+    <p class="c63 c59"><span class="c42">by Adelina Bajrami</span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0"><span class="c4">Early 2016 email from Remzi: &ldquo;Write a two page introduction to our
+            plan.&rdquo;</span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My reply: So I still don&rsquo;t
+            really know what you&rsquo;re asking me to write about. What do you mean by &ldquo;plan&rdquo;?</span></p>
+    <p class="c0"><span class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c4">I have some
+            questions: (sidenote: When I say &ldquo;we,&rdquo; I refer to a general we, we as in the people)</span></p>
+    <ul class="c52 lst-kix_list_2-0 start">
+        <li class="c2 li-bullet-0"><span class="c4">So, what&rsquo;s going to happen to government? Who&rsquo;s going to
+                govern the people? Will we have any formal leadership? How is that all going to work? What does
+                &ldquo;real&rdquo; democracy look like?</span></li>
+        <li class="c2 li-bullet-0"><span class="c4">The basis of EarthVote is to actually get the entire Earth to vote,
+                but how?</span></li>
+        <li class="c2 li-bullet-0"><span class="c4">This might be too far into the future, but if we are able to
+                accomplish our goal- you know, giving the power back to the people, revolutionizing the system, etc.-
+                what are we to do with existing landfills, polluted waters/soil, destroyed habitats, and other
+                difficulties relating to the environment? We could revitalize forests and the like by planting trees,
+                but trees take a long time to grow. The necessity for vegetation is great, so there is always nothing
+                wrong with planting stuff, but that&rsquo;s definitely not a quick solution. There are also existing
+                ways to purify water, so we shouldn&rsquo;t be having a water predicament either. Everyone should have
+                access to clean, safe water; it is unjust to deprive people of the most vital component of survival, and
+                it is just as criminal to purposely contaminate good water. But landfills, though? What do you propose
+                we do about that? How can we eliminate the billions of accumulated waste without further damaging the
+                planet? How about restoring habitats?</span></li>
+        <li class="c2 li-bullet-0"><span class="c4">What would a transition look like? How long would it take? How could
+                we get everyone to contribute to a switch?</span></li>
+        <li class="c2 li-bullet-0"><span class="c4">Side thought: Imagine how cool the world would be with new
+                technology. Like 3D printers- those things are my favorite. At this point, we can create almost anything
+                with a 3D printer; this is one of many inventions that are changing the way we do stuff in
+                society.</span></li>
+        <li class="c0 c212 li-bullet-0"><span class="c4">Okay, so this isn&rsquo;t a question either, but a thought to
+                consider: Right now we have a food crisis, but I feel as if I shouldn&rsquo;t be too worried about
+                supplying food to people in the future with all these advancements in science and- don&rsquo;t bash-the
+                genetic modification of food to thrive in different conditions. Genetically altering a food item
+                isn&rsquo;t BAD, like many people claim it is. The only thing bad about adding science experimentation
+                to our food (in our current situation) is that a lot of it is under corporate control, so we are
+                completely unsure of what the frick is being put in our food.</span></li>
+    </ul>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0"><span class="c108 c60">Late 2016: My Introduction</span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There are problems in this
+            world: greed, war, ecological destruction, crime, oppression, abuse, addiction, mental illness, suicide;
+            that list is too long.</span></p>
+    <p class="c0"><span class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c4">We all know
+            what is needed: an alternative system. But they say there is no alternative. That is a lie. Here&rsquo;s a
+            plan to solve all problems.</span></p>
+    <p class="c0"><span class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c4">Utopia. I
+            actually hesitate to say this. Utopia is certainly not the right word, is it? Maybe not, but what
+            we&rsquo;ve got on our hands is a good start&mdash; a great start&mdash;&nbsp; that will surely inspire
+            people out there to rise up and get their voice heard. Our glorious plan will light a spark that will
+            rapidly spread and grow to a flame, and then transform into a bigger and bigger fire, sweeping the planet
+            until it has reached the span of the entire population, igniting within every human being a flare of
+            emotions, whether it be hope, fear, or rage. People are going to feel something, and that is what we want.
+            We need people to at least be aware of what is going on before we can really begin impacting change. So,
+            what is our so-called glorious plan?</span></p>
+    <p class="c0"><span class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c4">Well, first
+            something we need to recognize and understand is our current situation. Let&rsquo;s just focus on housing
+            for a moment. Right now, we have an abundance of housing, but we continue to build more and more living
+            spaces. We tear down trees and habitats to make space for houses that will remain vacant until a person or
+            people come along with the sufficient means to purchase or rent the house. Not to mention, there are plenty
+            of existing apartments that are permanently empty and will doubtably be used by anyone anytime soon. What I
+            am getting at is we have enough living space for pretty much every human on this planet, really. There
+            isn&rsquo;t any reason why we should have a homeless population when we could easily provide these people
+            with a safer place to live. The issue at hand is money, of course; that is the only thing holding us
+            back.</span></p>
+    <p class="c0"><span class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c4">Housing is
+            just one aspect of our messed up system, but I want to highlight the last thing I just mentioned: money.
+            Money is essentially the root of our problems; and not-so coincidentally the root of our plan. Before I
+            begin on laying out this plan, there are a couple things to keep in mind. For one, our plan neutralises
+            money&rsquo;s power. Secondly, our plan is a great deal to take in, so it will sound crazy upon the initial
+            reading. But I assure you, it is anything but.</span></p>
+    <p class="c0"><span class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c4">So, money.
+            The current system is powered by money. It is well known that money leads to greed and greed leads to other
+            evil things and in turn creates a whole spiral of crap in which we fall into and can&rsquo;t get out of. We
+            spend a lot of time avoiding stepping into dog waste, but why is it we&rsquo;ve never used the same
+            precaution with the crap money constantly pumps out? Do we really want to live in a world where we are
+            perpetually stuck in the center of a pile of crap? Ew, no way, that&rsquo;s gross, unsanitary. Yuck. No, we
+            want to get away from this system. How? Simple: get rid of money. That&rsquo;s blasphemy, you say? Well, I
+            say that&rsquo;s genius!</span></p>
+    <p class="c0"><span class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c4">So now we
+            just got rid of money. In our plan, we present the idea of Credit. Okay, so the name isn&rsquo;t perfect,
+            but it&rsquo;s an idea- just focus on the concept and then we can deal with the name if the need arises.
+            Credit is currency everyone gets automatically every month and something everyone earns more of simply by
+            contributing in their community. To ease any confusion, I must mention something I failed to do earlier on:
+            the plan consists of a completely remodeled society, so everything you understand of how the world works now
+            you must forget, throw out the window or into a fire. For in our plan, people don&rsquo;t work countless
+            hours in useless jobs, they work whenever they want in circumstances they will enjoy. For in our plan, we
+            can share and learn information with each other freely and collectively. And for everything we contribute,
+            we will earn an amount of Credit we can use to obtain something of necessity or pleasure.</span></p>
+    <p class="c0"><span class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c4">Let&rsquo;s
+            go back to housing again for a moment. Previously I stated that we have an abundance of houses and
+            apartments and other living spaces for anyone who wants or needs to use them. Since we&rsquo;ve gotten rid
+            of money, everyone now has the opportunity to live wherever they please for however long they please. In
+            this new society, we do not have debts either, so you will be the caretaker of your living space free and
+            clear. That&rsquo;s how it should be, correct? Everyone deserves the right to a comfortable, safe shelter,
+            yes? This is what we want to see in our plan.</span></p>
+    <p class="c0"><span class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c4">To summarize
+            thus far, we&rsquo;ve destroyed money, replaced it with Credit, and offered guaranteed housing. Some other
+            free things include school, information, food and water. Some things you might still be confused about:
+            travel, government, global warming, and technology, and maybe Credit. Well, I only have two pages, so it is
+            impossible to outline every single detail of our plan; I am only speaking in general terms for now. To
+            appease a few lingering questions, climate change will be much easier to address with the abandonment of
+            money because corporations will no longer be drilling into earth or releasing poison into our water or our
+            air for their own private gain. We can finally begin the transition into a society less dependent on fossil
+            fuel because it will no longer require bucket loads of money. We will finally be able to live in a peaceful
+            world because war will no longer be &ldquo;necessary.&rdquo; What will there be to fight over? We will
+            finally be able to recognize everyone&rsquo;s basic human rights and honor everyone&rsquo;s status as a
+            human being. Although not blood related, you are my brother (or sister) and so is everyone else around you.
+            We were all born on this planet and deserve the same amount of basic respect. Since the planet is our home,
+            it is our responsibility to protect and take care of it. It is also our duty to live in harmony with other
+            species and wildlife for they are a part of the wonder that is Earth. We live in a world where we are always
+            competing for everything, and it&rsquo;s only hurting us more than anything. It is time to change.</span>
+    </p>
+    <p class="c0"><span class="c7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c4">The plan
+            isn&rsquo;t perfect, and there is always room for improvement; but it is a start- and a good one I might
+            add. Too often in revolutions do we see failure as the people did not have a clear picture of what they
+            truly desired. Now it is time to begin and finish a revolution across the globe and ultimately succeed. No
+            more capitalism, no more communism, no more dictatorships, no more socialism, no more fascism- we need
+            something new and we need it now or else we really are screwed. I&rsquo;m sick of always being stuck in this
+            crap pile: I want out. And so do you, most likely. I just want to live a life where I can read and write and
+            travel in peace without having to worry about working for nothing for some old white dudes. Enough is
+            enough. I&rsquo;m done.</span></p>
+    <p class="c0 c227"><span class="c4">So there you have it: your gosh darn two pages. I honestly wrote and rewrote the
+            beginning so many times so that&rsquo;s whatever. Anyway, I still feel as if I did not say everything I
+            wanted to say but like I said in those two pages I was just speaking generally. And my audience is anyone
+            unfamiliar with what we were doing.</span></p>
+    <p class="c33 c15"><span class="c16"></span></p>
+    <p class="c33 c15"><span class="c16"></span></p>
+    <p class="c33 c15"><span class="c16"></span></p>
+    <p class="c46"><span class="c55">Chapter 1</span></p>
+    <p class="c46"><span class="c48">What Kind of World Do You Want To Live In?</span></p>
+    <p class="c33 c15"><span class="c11"></span></p>
+    <h3 class="c54 c59"><span class="c5">&ldquo;Create a place for people to live like human beings, instead of slaves
+            to some bullshit concept of progress that is driving us all mad.&rdquo; - Hunter S. Thompson</span></h3>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is a book of hope. It is about a
+            vision of a new game of life conceived in 2015 during the most depressing and challenging period of my life.
+            Driven out of desperation to find an alternative to the incessant inequality and instability of our economic
+            system led to questions which led to answers which lead to solutions.</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The purpose of this book and the
+            primary objective of Common Planet is to introduce to the world an alternative global economic protocol
+            designed to meet the basic needs and maximum desires of all people within a sustainable biosphere.
+            It&rsquo;s basically a foundational economic blueprint for how we can work together to solve all of our
+            problems without killing each other: to begin real Civilization.</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We do this by changing the game of
+            money and property, resulting in Sovereignty, Opportunity and Liberty for each person on the planet.</span>
+    </p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;So this is a new socio-economic
+            innovation of the monetary system which enables economic fairness leading to social cohesion, democratic
+            participation and environmental sustainability. We call it a Flow currency system, in contrast to the
+            traditional Circulatory currency system now in play. It&rsquo;s an evolution of economics which ends
+            poverty, homelessness and war by eliminating the need for banks, debt and taxes forever!</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indeed, these are some bold and
+            seemingly ridiculous claims, notwithstanding, you&rsquo;ll soon read about how.</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How money is created and directed is
+            the crux of our problems. Money is the most powerful tool in the history of the world and yet is also the
+            least understood. How money works is concealed behind a veil of complexity, muddled by disinformation and
+            covered in secrecy. In the comprehensive classic 1973 book </span><span class="c31">Money: Whence It Came,
+            Where It Went</span><span class="c4">, John Kenneth Galbraith exposes how &ldquo;The study of money, above
+            all other fields in economics, is one in which complexity is used to disguise truth or to evade truth, not
+            to reveal it.&rdquo; Money was purposely shaped to become the ultimate tool of power that it is today and
+            now it&#39;s time for us to reshape it into a tool for peace and prosperity.</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The economic system we&rsquo;ve
+            inherited evolved from an expanding industrial system and it is no longer fit for purpose. It never really
+            was. It is based on a primitive notion of ownership, that of private enclosure, and uses the simple equation
+            of profit through trade. It&rsquo;s justified based on the childish premise of &lsquo;finders keepers,
+            losers weepers&rsquo;, which itself evolved into the equally childish premise of the &lsquo;divine right of
+            Kings&rsquo;. Today, money is our master. The divine right of capital is the law of the land
+            everywhere.</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;What we think of as economics is
+            based on the concept of trade, which is based on the concept of ownership of things that can be traded. In
+            the game of life today, it is </span><span class="c31">only</span><span class="c4">&nbsp;through trade that
+            value can be realized. Over time, financial tools, like currency, emerged to measure value and to command
+            all the resources of the planet, including human activity, toward the perpetual production of material goods
+            from the physical world because the drive for profit fuels the race to produce more stuff for trade. That is
+            the equation of today&rsquo;s economics.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;What is traded?
+            Property.</span><sup class="c1"><a href="#ftnt2" id="ftnt_ref2">[2]</a></sup><span class="c4">&nbsp;What is
+            Property? At its most basic, Property is any </span><span class="c31">thing</span><span class="c4">&nbsp;of
+            value</span><sup class="c1"><a href="#ftnt3" id="ftnt_ref3">[3]</a></sup><span class="c4">. It can be
+            physical or abstract. Land, buildings, houses, equipment, cars, plants, animals, people (labor), money,
+            stocks, bonds, jewelry, art, patents, copyrights, intellectual property, crypto currencies and non-fungible
+            tokens (NFT) are all examples of Property: any </span><span class="c31">thing</span><span
+            class="c4">&nbsp;of value.</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Throughout this book, I will make
+            reference to </span><span class="c11">&lsquo;</span><span class="c107 c60">Game A&rsquo;</span><sup
+            class="c60 c165"><a href="#ftnt4" id="ftnt_ref4">[4]</a></sup><span class="c11">: to own Property for value
+            extraction or value appreciation.</span><span class="c4">&nbsp;Essentially, the game is to acquire as much
+            Property as possible for its value.</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There are three different kinds of
+            players: People, Corporations and Nations and they are all perpetually in pursuit of more Property. The
+            value of any player is something called net worth, which is exactly the sum total value of all Property they
+            own. All the players compete with one another over Property and are ranked by net worth.</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Leo Tolstoy&rsquo;s remarks on
+            Property sums up the Game A world perfectly:</span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c43"><span class="c5">States and governments intrigue and go to war for property. Bankers, traders,
+            manufacturers, and landowners work, scheme, and torment themselves and others for property; officials and
+            artisans struggle, cheat, oppress and suffer for the sake of property; our Law Courts and police defend
+            property; our penal settlements and prisons and all the horrors of our so-called repression of crime, exist
+            on account of property. Property is the root of all evil, and the division and safeguarding of property
+            occupies the whole world.</span><sup class="c25"><a href="#ftnt5" id="ftnt_ref5">[5]</a></sup></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0"><span class="c4">Adam Smith, the so-called &lsquo;father of economics&rsquo;, described the right to
+            trade Property as the defining feature of capitalism. Innovations in science and technology made trade a
+            more valuable part of the economy and thus capitalism advanced first by navigation at sea then by the
+            harnessing of steam and electric power in the late eighteenth and nineteenth centuries which fueled a
+            massive expansion in trade. Today, trade is still the giant global game and &ldquo;the division and
+            safeguarding of property occupies the whole world.&rdquo;</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Humans have throughout recent history
+            mostly been playing variations of this same game: to trade Property for maximum value (profit). Much of it
+            has to do with natural laws and biology, however, the role of humans is continually obscured to hide the
+            truth. But it should be no mystery that people have designed and continue to shape many of its rules. One of
+            my favorite authors, the late David Graeber, reminds us that &ldquo;the ultimate, hidden truth of the world
+            is that it&rsquo;s something that we make, and could just as easily make differently.&rdquo;</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Change is inevitable. The world is
+            constantly transforming, but while change is constant, the rate at which things change is not. Our
+            population and technological advances are expanding exponentially, and the adjustments we absolutely need to
+            make won&rsquo;t come for a while, or maybe even not at all, if we continue to live the way we do. In fact,
+            if we keep going on this way, we will continue to see more harmful happenings occur rather than positive
+            ones.</span><sup class="c1"><a href="#ftnt6" id="ftnt_ref6">[6]</a></sup><span class="c4">&nbsp;So this is
+            our task: to fashion an entirely new game of life in which all humans on Earth can live in an environment of
+            opportunity and autonomy rather than oppression and domination.</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All life depends on Property and
+            economics is the study of the management of Property. </span><span class="c11">Property </span><span
+            class="c58">is</span><span class="c11">&nbsp;life</span><span class="c4">. How Property continues to be
+            managed today can be said to be evil. What else do you call increasing inequality and perpetual poverty
+            amidst escalating ecological destruction? Property is a necessity for life, for continuation of game play,
+            but what is private vs common is misunderstood, misidentified and misallocated all because we&rsquo;ve
+            confused prices for value. The value of a person should never have been measured by the prices of trading
+            Property. In the beginning Property was scarce, but that is no longer a major concern. Today, our problems
+            are inefficiency, corruption and intentional bad policy.</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Common Planet is a new global
+            economic game where every person gets access to housing for life, monthly UBI of Credit currency and more
+            Credit every time they learn, play or work. All commercial land, properties and resources become the
+            commons, accounted for and listed in networked, Holochain databases. Corporations and government agencies
+            transform operations into co-ops with free lease to their equipment and properties. Workers are paid
+            directly with Credit as mentioned. Bonus Credit is awarded to workers in Enterprises based on new
+            &lsquo;profit&rsquo; measures oriented toward producing the best possible products in the best possible ways
+            that benefit the real stakeholders: workers, consumers and society. Credit flows to all and all use it to
+            acquire goods produced from the commons which then turn into private personal possessions. Credit is a Flow
+            currency, not circulatory like money, so it is created when earned and deleted when used.</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;That&rsquo;s just a broad overview to
+            give you a sense of what this is all about. It may sound fantastic and unbelievable right now but after
+            chapter six you&rsquo;ll have a clear understanding of how all this relates to real life.</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ldquo;We live in capitalism,&rdquo;
+            said the great Ursula K. Le Guin, &ldquo;Its power seems inescapable. So did the divine right of kings. Any
+            human power can be resisted and changed by human beings. Resistance and change often begin in art, and very
+            often in our art, the art of words.&rdquo;</span><sup class="c1"><a href="#ftnt7"
+                id="ftnt_ref7">[7]</a></sup><span class="c4">&nbsp;It will take a lot of words and a lot of voices. This
+            new global canvas will require artists of all kinds to spread the message, to build the new world. So that
+            soon we may all dance in a world of our choosing. I&#39;m looking forward to others&rsquo;
+            contributions.</span></p>
+    <p class="c0 c15"><span class="c4"></span></p><a id="t.2d0a1b8b58cf4fa609fd377f6b51ef26a00d524e"></a><a
+        id="t.1"></a>
+    <table class="c94">
+        <tbody>
+            <tr class="c22">
+                <td class="c72 c92" colspan="1" rowspan="1">
+                    <p class="c54 c59"><span class="c108">Game A:</span><span class="c74">&nbsp;Trade. All value comes
+                            from trading.</span></p>
+                </td>
+            </tr>
+            <tr class="c82">
+                <td class="c72 c60" colspan="1" rowspan="1">
+                    <p class="c0"><span class="c42">To extract value by trading Property. It is a rivalrous, win/lose
+                            game using money that is created by banks who get it as free credit but issue it as
+                            interest-bearing debt (Property) to Nations, Corporations and people, who then use it to
+                            value and exchange all the Property on Earth. Only Property is valuable.</span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="c54 c59 c15"><span class="c176 c60"></span></p>
+    <p class="c0 c15"><span class="c4"></span></p><a id="t.4ecc8f28c388c961f01146aeb30c2aa327f29850"></a><a
+        id="t.2"></a>
+    <table class="c94">
+        <tbody>
+            <tr class="c22">
+                <td class="c72 c92" colspan="1" rowspan="1">
+                    <p class="c54 c59"><span class="c108">Common Planet:</span><span class="c74">&nbsp;Contribute. All
+                            value comes from contributions.</span></p>
+                </td>
+            </tr>
+            <tr class="c50">
+                <td class="c72 c60" colspan="1" rowspan="1">
+                    <p class="c0"><span class="c74">To create value by managing Property as stewards, not owners. Credit
+                            flows directly to all people, who then use it to satisfy their needs and desires in the open
+                            market of goods produced from the Commons. People are valuable.</span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;According to all economic theory,
+            &lsquo;there is no alternative&rsquo; (TINA) to economic growth. Unfortunately, economic growth means
+            continued ecological destruction. Author Naomi Klein writes a lot about the practices of business and how
+            &ldquo;our economy is at war with the many forms of life on earth, including human life. What the climate
+            needs to avoid collapse is a contraction in humanity&rsquo;s use of resources; what our economic model
+            demands to avoid collapse is unfettered expansion. Only one of these sets of rules can be changed, and
+            it&rsquo;s not the laws of nature.&rdquo;</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ldquo;Whether we and our politicians
+            know it or not, Nature is party to all our deals and decisions, and she has more votes, a longer memory, and
+            a sterner sense of justice than we do,&rdquo; cautions Wendell Berry.</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Over 15,000 scientists from 184
+            countries issued a second dire warning to humanity in 2017. They show how the overconsumption of the
+            world&rsquo;s resources is leading us to &ldquo;widespread misery and catastrophic biodiversity loss.&rdquo;
+            Time is running out, they warned: &ldquo;Soon it will be too late to shift course away from our failing
+            trajectory.&rdquo;</span><sup class="c1"><a href="#ftnt8" id="ftnt_ref8">[8]</a></sup></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More recently, the Intergovernmental
+            Panel on Climate Change (IPCC) just released its sixth report in August 2021 using words like
+            &ldquo;unequivocal&rdquo;, &ldquo;unprecedented&rdquo; and &ldquo;irreversible.&rdquo;</span><sup
+            class="c1"><a href="#ftnt9" id="ftnt_ref9">[9]</a></sup><span class="c4">&nbsp;Things are not going well. On
+            August 14, 2021, at Summit Station, the highest point in elevation (3,216m or 10,551 ft), on the Greenland
+            Ice Sheet which is basically the coldest location in the Northern Hemisphere, it rained for the first time
+            ever!</span><sup class="c1"><a href="#ftnt10" id="ftnt_ref10">[10]</a></sup></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Not all economic growth is inherently
+            destructive. However, the current metric we use, Gross Domestic Product (GDP), makes no distinctions on
+            which production processes are sustainable and which are harmful. It&rsquo;s all considered &lsquo;economic
+            growth&rsquo;. We cannot continue to be willfully ignorant and allow ecological destruction to continue
+            because of old economic thinking and entrenched power. &ldquo;Anyone who believes exponential growth can go
+            on forever in a finite world is either a madman or an economist,&rdquo; remarked Kenneth Boulding,
+            co-founder of General Systems Theory.</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In March 1968, Robert (Bobby)
+            Kennedy, while running for President, gave this speech highly critical of measuring value based on prices of
+            goods:</span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c43"><span class="c5">If we judge the United States of America by that&mdash; that Gross National Product
+            counts air pollution and cigarette advertising, and ambulances to clear our highways of carnage. It counts
+            special locks for our doors and the jails for the people who break them. It counts the destruction of the
+            redwood and the loss of our natural wonder in chaotic sprawl. It counts napalm and counts nuclear warheads
+            and armored cars for the police to fight the riots in our cities. It counts Whitman&rsquo;s rifle and
+            Speck&rsquo;s knife, and the television programs which glorify violence in order to sell toys to our
+            children. Yet the gross national product does not allow for the health of our children, the quality of their
+            education or the joy of their play. It does not include the beauty of our poetry or the strength of our
+            marriages, the intelligence of our public debate or the integrity of our public officials. It measures
+            neither our wit nor our courage, neither our wisdom nor our learning, neither our compassion nor our
+            devotion to our country, it measures everything in short, except that which makes life
+            worthwhile.</span><sup class="c25"><a href="#ftnt11" id="ftnt_ref11">[11]</a></sup></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0"><span class="c4">The solution, of course, is to build an economy that is geared toward
+            well-being&mdash; toward economic development&mdash; rather than economic growth. Some say we&rsquo;ve
+            already passed the tipping point. Let&#39;s hope not. The architect, inventor and futurist Buckminster
+            Fuller offered us this hope and warning in 1981:</span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c43"><span class="c5">To know now what we could never have known before 1969&mdash;that we now have an
+            option for all humanity to &quot;make it&quot; successfully on this planet in this lifetime&mdash;is not to
+            be optimistic. It is only a validation of hope... Whether it is to be Utopia or Oblivion will be a
+            touch-and-go relay race right up to the final moment. The race is between a better-informed, hopefully
+            inspired young world versus a running-scared, misinformedly brain-conditioned, older world. Humanity is in
+            &quot;final exam&quot; as to whether or not it qualifies for continuance in Universe.</span><sup
+            class="c25"><a href="#ftnt12" id="ftnt_ref12">[12]</a></sup><span class="c5">&nbsp;Quite clearly, our task
+            is predominantly metaphysical, for it is how to get all of humanity to educate itself swiftly enough to
+            generate spontaneous social behaviors that will avoid extinction.</span><sup class="c25"><a href="#ftnt13"
+                id="ftnt_ref13">[13]</a></sup></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0"><span class="c4">If, for well over half a century&mdash; longer than me and most people alive
+            today&mdash; we&rsquo;ve had the necessary technology and scientific knowledge to provide every person with
+            the material conditions for a prosperous and sustainable society, why all this inefficiency, suffering and
+            waste?</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The civil rights movement of the
+            1960s advanced the cause of racial equality in America, and while it wasn&rsquo;t tolerated it was
+            ultimately accepted because they knew as long as they controlled Property with the laws, the police and the
+            courts, power would be maintained. Just like John Daniel Ehrlichman, counsel and Assistant to the President
+            for Domestic Affairs under President Richard Nixon told us: &ldquo;The Nixon campaign in 1968, and the Nixon
+            White House after that, had two enemies: the antiwar left and black people. You understand what I&rsquo;m
+            saying? We knew we couldn&rsquo;t make it illegal to be either against the war or black, but by getting the
+            public to associate the hippies with marijuana and blacks with heroin, and then criminalizing both heavily,
+            we could disrupt those communities. We could arrest their leaders, raid their homes, break up their
+            meetings, and vilify them night after night on the evening news. Did we know we were lying about the drugs?
+            Of course we did.&rdquo;</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Make something illegal then use force
+            to justify the non-crime crime. This is common knowledge. Ayn Rand wrote about this in her 1957 novel
+        </span><span class="c31">Atlas Shrugged</span><span class="c4">: &ldquo;There&#39;s no way to rule innocent men.
+            The only power any government has is the power to crack down on criminals. Well, when there aren&#39;t
+            enough criminals one makes them. One declares so many things to be a crime that it becomes impossible for
+            men to live without breaking laws.&rdquo; In this way, policing became a bigger tool for social control, and
+            it&rsquo;s only gotten worse since.</span></p>
+    <p class="c0"><span class="c4">&nbsp;</span></p>
+    <p class="c43"><span class="c5">In the 1960s, the United States incarcerated its population at a rate that was
+            comparable to other developed countries. Today, America ranks among the most punitive states in world
+            history. Black men born between 1965 and 1969 have been more likely to go to prison than to graduate from
+            college. American punishment is thus of unprecedented </span><span class="c84 c60">severity</span><span
+            class="c5">&nbsp;&mdash; more prisoners per capita than ever before, and more so than any comparable country
+            in world history. It is also characterized by extreme </span><span class="c84 c60">inequality</span><span
+            class="c5">&nbsp;&mdash; some Americans are much more likely to languish in prisons than others. These are
+            its twin features.</span><sup class="c25"><a href="#ftnt14" id="ftnt_ref14">[14]</a></sup></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0"><span class="c4">It is only power over Property the rich have ever cared about, and so as soon as talk
+            began about poverty, inequality and the unfairness of economics, so too did the killing. They had already
+            killed Bobby&rsquo;s brother JFK in 1963, then just a few weeks after Bobby&rsquo;s 1968 speech, Martin
+            Luther King Jr (MLK) was shot and killed, and two months later Bobby was shot and killed too.</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In a 1967 speech titled &ldquo;Beyond
+            Vietnam: A Time to Break Silence,&rdquo; MLK linked poverty to the failure of capitalism: &ldquo;We as a
+            nation must undergo a radical revolution of values. We must rapidly begin the shift from a thing-oriented
+            society to a person oriented society. When machines and computers, profit motives and property rights are
+            considered more important than people, the giant triplets of racism, extreme materialism, and militarism are
+            incapable of being conquered.&rdquo; They murdered MLK for daring to challenge power, and every year since
+            have continued to suppress, repress and murder thousands of people all over the world without
+            pause.</span><sup class="c1"><a href="#ftnt15" id="ftnt_ref15">[15]</a></sup><span class="c4">&nbsp;All of
+            this evil is 100% driven by our amoral economic game.</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If not for a lack of tools or brains,
+            then our failures to protect human health and the environment must stem from our dysfunctional
+            socio-economic system. As highly social animals, above all, we value fairness and seek cooperation. Why then
+            have we locked ourselves into this perpetual war over the resources of the planet? Make no mistake,
+            it&rsquo;s a game of power and it&rsquo;s deep rooted in Property.</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Players lie, steal and kill to
+            compete for economic advantage. Everybody knows we have no choice but to compete for Property, that the game
+            we are playing is unfair, rigged and built on lies and secrets to hide the theft and plunder of the past.
+            Much of who owns what, how and how much is secret. For her role in exposing some of the truth in the 2016
+            release of the Panama Papers</span><sup class="c1"><a href="#ftnt16" id="ftnt_ref16">[16]</a></sup><span
+            class="c4">&nbsp;they killed Daphne C. Galizia, the journalist from Malta, in a car bomb triggered via text
+            by some paid goons who were on a boat out at sea.</span></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now there is another leak, called the
+            Pandora Papers, which, unlike the Panama Papers with data drawn from just one law firm, &ldquo;this new
+            material includes records from 14 separate financial-services entities operating in countries and
+            territories including Switzerland, Singapore, Cyprus, Belize and the British Virgin Islands. The files
+            detail more than 29,000 offshore accounts, more than double the number identified in the Panama Papers.
+            Among the account owners are more than 130 people listed as billionaires by Forbes magazine and more than
+            330 public officials in over 90 countries and territories, twice the number found in the Panama
+            documents.&rdquo;</span><sup class="c1"><a href="#ftnt17" id="ftnt_ref17">[17]</a></sup></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Who was responsible for this latest
+            leak? Journalist Benjamin Norton, in a Twitter thread claims it&rsquo;s just the CIA playing Game A
+            information warfare:</span></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c43"><span class="c5">...the so-called &ldquo;leak&rdquo; was likely a hack by US spy agencies. The
+            &ldquo;journalists&rdquo; in Nicaragua that billionaire-funded @ICIJorg worked with on the Pandora Papers
+            are all US govt-funded anti-Sandinista activists. The goal of these right-wing opposition activists was to
+            show how Venezuela found ways to get around illegal US sanctions, and portray that as
+            &ldquo;corruption.&rdquo; That&#39;s not journalism; it&#39;s US govt-sponsored information warfare to
+            justify a murderous blockade. The message? Evading illegal US sanctions = &ldquo;corruption.&rdquo; There
+            are ZERO US politicians in the Pandora Papers, but there are 1200 Venezuelans. No major US assets were hurt
+            by the Pandora Papers.</span><sup class="c25"><a href="#ftnt18" id="ftnt_ref18">[18]</a></sup></p>
+    <p class="c0 c15"><span class="c4"></span></p>
+    <p class="c0"><span class="c4">I&rsquo;m all for transparency but selective transparency is gamesmanship. Author Max
+            Borders says &ldquo;We&rsquo;re living in an information Hall of Mirrors. That means everything we consume
+            &mdash; whether articles, memes, videos, or the nightly news &mdash; should invite our suspicion. It&rsquo;s
+            hard to tell what&rsquo;s true anymore. Journalism has devolved from being a truth-tracking enterprise into
+            a mechanism of behavioral control by powerful elites.&rdquo;</span><sup class="c1"><a href="#ftnt19"
+                id="ftnt_ref19">[19]</a></sup></p>
+    <p class="c0"><span class="c4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Information is power so this
+            isn&rsquo;t a surprise. After all, disinformation is one of the most powerful tactics in this rivalrous
+            game.</span></p>
+</body>
+
+</html>

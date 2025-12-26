@@ -1,12 +1,12 @@
 #key	value
-name	Remzi Bajrami [CPF]
-byline	[todo: byline]
+name	Remzi Bajrami
+byline	Co-founder, Common-Planet.org
 safeName	commonplanet-remzi
 iconName	Remzi, Co-founder
-welcome-message	[todo: welcome]
-footer-message	[todo: footer]
+|welcome-message	[todo: welcome]
+footer-message	Revolutionizing Economics with Creditism
 siteMenuName	Remzi Home
-sections	
+sections	books, influences
 local-url	http://localhost/common-planet/remzi/
 live-url	https://remzi.common-planet.org/
 year	2025

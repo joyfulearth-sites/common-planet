@@ -1,12 +1,12 @@
 #key	value
-name	Adelina Bajrami [CPF]
+name	Adelina Bajrami
 byline	[todo: byline]
 safeName	commonplanet-adelina
 iconName	Adelina, Co-founder
 welcome-message	[todo: welcome]
 footer-message	[todo: footer]
 siteMenuName	Adelina Home
-sections	
+sections	whois
 local-url	http://localhost/common-planet/adelina/
-live-url	https://adelina.common-planet.org/
+live-url	https://adebajrami.com/
 year	2025

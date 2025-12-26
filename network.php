@@ -1,28 +1,43 @@
 <?php
 variables([
-	'link-to-section-home' => true,
+	'no-sections-in-footer' => true,
 	'link-to-site-home' => true,
+
 	'assistantEmail' => 'commonplanet1+assistant@gmail.com',
+	'email' => 'team@common-planet.org',
+	'phone' => '+1-503-882-7500',
+	'whatsapp' => '919841223313' //'18604880545',
 ]);
 
-function setNetworkSocial() {
-	$site = variable('safeName');
-	$op = [];
-	if ($site == 'commonplanet-adelina') {
-		$op = [
-			[ 'type' => 'fa-brands fa-redhat bg-success', 'url' => pageUrl('whoami'), 'name' => 'Adelina Bajrami' ],
+function network_before_render() {
+	setupSiteVars();
+}
+
+function setupSiteVars() {
+	$social = [];
+	$allLinks = true;
+	if (SITENAME == 'adelina') {
+		$social = [
+			[ 'type' => 'linkedin', 'url' => 'https://www.linkedin.com/in/adelina-bajrami-952130347/', 'name' => 'Adelina Bajrami' ],
 		];
+		variables(['email' => 'adebajrami@common-planet.org']);
+	} else if (SITENAME == 'remzi') {
 	}
 
-	$op = array_merge($op, [
-		'----',
-		[ 'type' => 'fa-brands fa-redhat bg-info', 'url' => replaceNetworkUrls('%urlOf-imran%') . 'whoami/', 'name' => 'Imran' ],
-		[ 'type' => 'fa-brands fa-redhat bg-primary', 'url' => replaceNetworkUrls('%urlOf-remzi%') . 'whoami/', 'name' => 'Remzi' ],
+	if ($allLinks) variables([
+		'link-to-section-home' => true,
+		'link-to-node-home' => true,
+		'link-to-sub-node-home' => true,
 	]);
 
-	variable('social', $op);
-};
+	if (count($social)) $social[] = '----';
 
-function network_before_render() {
-	setNetworkSocial();
-}
+	variable('social', array_merge($social, [
+		[ 'type' => 'linkedin', 'url' => 'https://www.linkedin.com/in/remzib/', 'name' => 'Remzi Bajrami' ],
+		[ 'type' => 'linkedin', 'url' => 'https://www.linkedin.com/in/imranalinamazi/', 'name' => 'Imran Ali Namazi' ],
+		'----',
+		[ 'type' => 'fa-brands fa-redhat bg-primary', 'url' => replaceNetworkUrls('%urlOf-remzi%') . 'whoami/', 'name' => 'Remzi' ],
+		[ 'type' => 'fa-brands fa-redhat bg-success', 'url' => replaceNetworkUrls('%urlOf-adelina%') . 'whoami/', 'name' => 'Adelina' ],
+		[ 'type' => 'fa-brands fa-redhat bg-warning', 'url' => replaceNetworkUrls('%urlOf-cpimran%') . 'whoami/', 'name' => 'Imran' ],
+	]));
+};

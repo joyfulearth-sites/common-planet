@@ -1,11 +1,11 @@
 #key	value
 name	Partners @ Common-Planet
-byline	[todo: byline]
+byline	Join the Evolution
 safeName	commonplanet-partners
 iconName	CP Partners
-welcome-message	[todo: welcome]
-footer-message	[todo: footer]
-siteMenuName	Partners Home
+welcome-message	We reckon we are a **force for good**. Kindly consider [joining us ?](%url%join-us/BTNSUCCESS)
+footer-message	We stand at a critical juncture in the life of this biosphere.
+siteMenuName	Partner's Home
 sections	
 local-url	http://localhost/common-planet/partners/
 live-url	https://partners.common-planet.org/
