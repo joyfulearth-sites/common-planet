@@ -6,7 +6,7 @@ iconName	CP Team
 |welcome-message	[todo: welcome]
 footer-message	[todo: footer]
 siteMenuName	CPF Home
-sections	
+sections	people: members+advisors+partners
 local-url	http://localhost/common-planet/team/
 live-url	https://team.common-planet.org/
 year	2024

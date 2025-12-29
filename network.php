@@ -9,11 +9,14 @@ variables([
 	'whatsapp' => '919841223313' //'18604880545',
 ]);
 
-function network_before_render() {
-	setupSiteVars();
+function network_before_file() {
+	echo '<div class="m-4"></div>' . NEWLINE; //TODO: not when using a slider...
 }
 
+setupSiteVars();
+
 function setupSiteVars() {
+	$vars = [];
 	$social = [];
 	$allLinks = true;
 	if (SITENAME == 'adelina') {
@@ -22,8 +25,11 @@ function setupSiteVars() {
 		];
 		variables(['email' => 'adebajrami@common-planet.org']);
 	} else if (SITENAME == 'remzi') {
+	} else if (SITENAME == 'team') {
+		$vars['sections-have-files'] = true;
 	}
 
+	variables($vars);
 	if ($allLinks) variables([
 		'link-to-section-home' => true,
 		'link-to-node-home' => true,
@@ -35,10 +41,10 @@ function setupSiteVars() {
 	variable('social', array_merge($social, [
 		[ 'type' => 'linkedin', 'url' => 'https://www.linkedin.com/in/remzib/', 'name' => 'Remzi Bajrami' ],
 		[ 'type' => 'linkedin', 'url' => 'https://www.linkedin.com/in/imran-ali-namazi/', 'name' => 'Imran Ali Namazi' ],
-		/*
 		'----',
 		[ 'type' => 'fa-brands fa-redhat bg-primary', 'url' => replaceNetworkUrls('%urlOf-remzi%') . 'whoami/', 'name' => 'Remzi' ],
 		[ 'type' => 'fa-brands fa-redhat bg-success', 'url' => replaceNetworkUrls('%urlOf-adelina%') . 'whoami/', 'name' => 'Adelina' ],
+		/*
 		[ 'type' => 'fa-brands fa-redhat bg-warning', 'url' => replaceNetworkUrls('%urlOf-cpimran%') . 'whoami/', 'name' => 'Imran' ],
 		*/
 	]));
