@@ -34,10 +34,12 @@ function setupSiteVars() {
 
 	variable('social', array_merge($social, [
 		[ 'type' => 'linkedin', 'url' => 'https://www.linkedin.com/in/remzib/', 'name' => 'Remzi Bajrami' ],
-		[ 'type' => 'linkedin', 'url' => 'https://www.linkedin.com/in/imranalinamazi/', 'name' => 'Imran Ali Namazi' ],
+		[ 'type' => 'linkedin', 'url' => 'https://www.linkedin.com/in/imran-ali-namazi/', 'name' => 'Imran Ali Namazi' ],
+		/*
 		'----',
 		[ 'type' => 'fa-brands fa-redhat bg-primary', 'url' => replaceNetworkUrls('%urlOf-remzi%') . 'whoami/', 'name' => 'Remzi' ],
 		[ 'type' => 'fa-brands fa-redhat bg-success', 'url' => replaceNetworkUrls('%urlOf-adelina%') . 'whoami/', 'name' => 'Adelina' ],
 		[ 'type' => 'fa-brands fa-redhat bg-warning', 'url' => replaceNetworkUrls('%urlOf-cpimran%') . 'whoami/', 'name' => 'Imran' ],
+		*/
 	]));
 };

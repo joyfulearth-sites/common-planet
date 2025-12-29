@@ -24,18 +24,18 @@ ARTICLE-3COL-BOX
 
 ## Basic Information
 
-* Full Name
-* Email
-* Mobile
-* Address
-* Country
+* Full Name<!--open-->
+* Email<!--open-->
+* Mobile<!--open-->
+* Address<!--open-->
+* Country<!--open-->
 
 ARTICLE-CLOSE ARTICLE-3COL-BOX
 
 ## Your Background
 
-* BIO
-* Fields of Interest / Impact
+* BIO<!--open-->
+* Fields of Interest / Impact<!--open-->
 * Organization Name
 * Years Active / Nett Impact 
 
@@ -52,5 +52,7 @@ ARTICLE-CLOSE ARTICLE-3COL-BOX
 ARTICLE-CLOSE
 
 ALLARTICLES-CLOSE
+
+%engage-note%
 
 DIV-CLOSE
