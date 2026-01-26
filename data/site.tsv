@@ -1,10 +1,10 @@
 #key	value
 name	Common-Planet.org
-byline	[todo: byline]
-safeName	commonplanet-home
+byline	Dance Under Stars
+safeName	commonplanet
 iconName	CP Foundation
 |welcome-message	[todo: welcome]
-footer-message	[todo: footer]
+footer-message	Where We Have Total Freedoms as Sovreign Owners
 siteMenuName	CPF Home
 sections	
 local-url	http://localhost/common-planet/home/
