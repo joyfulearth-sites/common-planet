@@ -38,7 +38,8 @@ function setupSiteVars() {
 
 	if (count($social)) $social[] = '----';
 
-	variable('social', array_merge($social, [
+	//TODO: HI: urlOf aliases - sub-sites.tsv - git is optional
+	variable(socialBuilder::variableName, socialBuilder::create(array_merge($social, [
 		[ 'type' => 'linkedin', 'url' => 'https://www.linkedin.com/in/remzib/', 'name' => 'Remzi Bajrami' ],
 		[ 'type' => 'linkedin', 'url' => 'https://www.linkedin.com/in/imran-ali-namazi/', 'name' => 'Imran Ali Namazi' ],
 		'----',
@@ -47,5 +48,6 @@ function setupSiteVars() {
 		/*
 		[ 'type' => 'fa-brands fa-redhat bg-warning', 'url' => replaceNetworkUrls('%urlOf-cpimran%') . 'whoami/', 'name' => 'Imran' ],
 		*/
-	]));
+		]))->getItems()
+	);
 };
