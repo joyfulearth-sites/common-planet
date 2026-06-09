@@ -1,1 +1,0 @@
-Here be the profile of %nodeName%.
