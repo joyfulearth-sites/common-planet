@@ -2,12 +2,11 @@
 name	Common-Planet.org
 byline	Dance Under Stars
 safeName	commonplanet
-iconName	CP Foundation
+iconName	Common-Planet.org
 |welcome-message	[todo: welcome]
 footer-message	Where We Have Total Freedoms as Sovreign Owners
 siteMenuName	CPF Home
 sections	
-local-url	http://localhost/sites/common-planet/home/
-live-url	https://home.common-planet.org/
-showIn	networks
+local-url	http://localhost/networks/common-planet/dawn/
+live-url	https://dawn.common-planet.org/
 year	2018

@@ -3,7 +3,6 @@ variables([
 	'no-sections-in-footer' => true,
 	'link-to-site-home' => true,
 
-	'assistantEmail' => 'commonplanet1+assistant@gmail.com',
 	'email' => 'team@common-planet.org',
 	'phone' => '+1-503-882-7500',
 	'whatsapp' => '919841223313' //'18604880545',
